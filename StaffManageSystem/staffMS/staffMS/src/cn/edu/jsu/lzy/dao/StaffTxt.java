@@ -19,8 +19,12 @@ public class StaffTxt {
 	public static class StuOperate {//定义一个员工操作类，定义增、删、改等方法
 		  final static File file=new File("F:/java.course/stuff.txt");
 		  
-		  
-		  public static boolean addStuff(Vector v) {//定义增加员工的方法，v为内容
+		  /**
+		   * 定义增加员工的方法，v为内容
+		   * @param v
+		   * @return
+		   */
+		  public static boolean addStuff(Vector v) {//
 		    try(FileWriter fw=new FileWriter(file,true)){
 		      fw.write(v+"\r\n");
 //		      JOptionPane.showMessageDialog(null, "sucess");
@@ -29,8 +33,11 @@ public class StaffTxt {
 		    return false;
 		  }
 		  
-		  
-		  public void deleteStuff(String v) {//删除员工数据
+		  /**
+		   * 文本删除员工数据
+		   * @param v
+		   */
+		  public void deleteStuff(String v) {//
 			  try {
 		            RandomAccessFile raf = new RandomAccessFile(file, "rw");
 		            String line;
@@ -49,8 +56,12 @@ public class StaffTxt {
 		  }
 		  
 		  
-		  
-			  public static void change(String oldStr,String newStr){ //修改员工数据
+		  /**
+		   * 文本修改员工数据
+		   * @param oldStr
+		   * @param newStr
+		   */
+			  public static void change(String oldStr,String newStr){ //
 			        try {
 			            RandomAccessFile raf = new RandomAccessFile(file, "rw");
 			            String line;

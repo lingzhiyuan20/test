@@ -27,7 +27,8 @@ public class Register extends JFrame {
 	private JTextField password;
 
 	/**
-	 * Launch the application.
+	 * Launch the application.µÇÂ½½çÃæ
+	 * @param
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

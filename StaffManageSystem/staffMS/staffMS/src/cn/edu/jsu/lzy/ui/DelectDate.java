@@ -24,7 +24,8 @@ public class DelectDate extends JFrame {
 	private JLabel lblNewLabel_2;
 
 	/**
-	 * Launch the application.
+	 * Launch the application.删除数据库中的数据
+	 * @param
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -41,7 +42,8 @@ public class DelectDate extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame.删除并判断是否删除
+	 * @return
 	 */
 	public boolean delete() {//删除并判断是否删除
 		try {

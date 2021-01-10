@@ -15,7 +15,7 @@ public class MainInterface {
 	JFrame frame;
 
 	/**
-	 * Launch the application.
+	 * Launch the application.系统主界面
 	 * @param
 	 */
 	

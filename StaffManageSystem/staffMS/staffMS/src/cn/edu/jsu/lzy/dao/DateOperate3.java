@@ -82,7 +82,15 @@ public String getEntryDate() {
 public void setEntryDate(String entryDate) {
 	this.entryDate = entryDate;
 }
-
+/**
+ * ÍùÊı¾İ¿â¼ÓÈëÊı¾İ
+ * @param Cname
+ * @param Dname
+ * @param number
+ * @param name
+ * @param sex
+ * @param entryDate
+ */
 public static void DateAdd(String Cname,String Dname,String number,String name,String sex,String entryDate) {//Ôö¼ÓÊı¾İ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="insert into PD2(company,department,stuffNumber,sex,name,entryDate) values(?,?,?,?,?,?)";//Ê¹ÓÃÕ¼Î»·û¶¨Òå²åÈëÓï¾ä
@@ -106,6 +114,11 @@ public static void DateAdd(String Cname,String Dname,String number,String name,S
 		e.printStackTrace();
 	}
 }
+/**
+ * É¾³ıÊı¾İ¿âÖĞµÄÊı¾İ
+ * @param number
+ * @throws SQLException
+ */
 public static void DateDelete(String number) throws SQLException {//É¾³ıÊı¾İ 
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="delete from PD2 where stuffNumber="+number;//Ê¹ÓÃÕ¼Î»·û¶¨Òå²åÈëÓï¾ä
@@ -116,6 +129,12 @@ public static void DateDelete(String number) throws SQLException {//É¾³ıÊı¾İ
 	pstmt.close();
 	conn.close();
 }
+/**
+ * ²éÑ¯Êı¾İ¿âÖĞÖ¸¶¨µÄÊı¾İ
+ * @param number
+ * @return
+ * @throws SQLException
+ */
 public static Vector DateSelect(String number) throws SQLException{//²éÑ¯²¢Êä³öÊı¾İ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="select* from PD2 where stuffNumber="+number;//Ê¹ÓÃÕ¼Î»·û¶¨Òå²åÈëÓï¾ä
@@ -143,6 +162,12 @@ public static Vector DateSelect(String number) throws SQLException{//²éÑ¯²¢Êä³öÊ
 	conn.close();
 	return v;
 }
+/**
+ * ²éÑ¯Êı¾İ¿âÖĞÊÇ·ñ´æÔÚ¸ÃÊı¾İ
+ * @param number
+ * @return
+ * @throws SQLException
+ */
 public static boolean DateSelect2(String number) throws SQLException{//²éÑ¯²¢ÅĞ¶ÏÊı¾İ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="select* from PD2 where stuffNumber="+number;//Ê¹ÓÃÕ¼Î»·û¶¨Òå²åÈëÓï¾ä
@@ -178,6 +203,16 @@ public static boolean DateSelect2(String number) throws SQLException{//²éÑ¯²¢ÅĞ¶
 //	conn.close();
 //	return false;
 //}
+/**
+ * °´Ô±¹¤±àºÅÀ´ĞŞ¸ÄÊı¾İ
+ * @param Cname
+ * @param Dname
+ * @param number
+ * @param name
+ * @param sex
+ * @param entryDate
+ * @throws SQLException
+ */
 public static void DateUpdate(String Cname,String Dname,String number,String name,String sex,String entryDate) throws SQLException{//ĞŞ¸ÄÊı¾İp
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="update PD2 set company='"+Cname+"',department='"+Dname+"',stuffNumber='"+number+"',name='"+name+"',sex='"+sex+"',entryDate='"+entryDate+"' where stuffNumber="+number;//Ê¹ÓÃÕ¼Î»·û¶¨Òå²åÈëÓï¾ä
@@ -190,7 +225,11 @@ public static void DateUpdate(String Cname,String Dname,String number,String nam
 }
 //ÕË»§´¦Àí
 
-
+/**
+ * ÍùÓÃ»§±íÖĞ¼ÓÊı¾İ
+ * @param u
+ * @param p
+ */
 public static void UserDateAdd(int u,int p) {//Ôö¼ÓÊı¾İ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="insert into User1(userName,password) values(?,?)";//Ê¹ÓÃÕ¼Î»·û¶¨Òå²åÈëÓï¾ä
@@ -209,6 +248,11 @@ public static void UserDateAdd(int u,int p) {//Ôö¼ÓÊı¾İ
 		e.printStackTrace();
 	}
 }
+/**
+ * É¾³ıÓÃ»§
+ * @param u
+ * @throws SQLException
+ */
 public static void UserDateDelete(int u) throws SQLException {//É¾³ıÊı¾İ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="delete from User1 where userName="+u;
@@ -219,7 +263,12 @@ public static void UserDateDelete(int u) throws SQLException {//É¾³ıÊı¾İ
 	pstmt.close();
 	conn.close();
 }
-
+/**
+ * ĞŞ¸ÄÕËºÅÃÜÂë
+ * @param u
+ * @param p
+ * @throws SQLException
+ */
 public static void UserDateUpdate(int u,int p) throws SQLException{//ĞŞ¸ÄÊı¾İ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="update User1 set userName='"+u+"',password='"+p+"'where userName="+u;
@@ -230,6 +279,12 @@ public static void UserDateUpdate(int u,int p) throws SQLException{//ĞŞ¸ÄÊı¾İ
 	pstmt.close();
 	conn.close();
 }
+/**
+ * ²éÑ¯ÕËºÅÊÇ·ñ´æÔÚ
+ * @param n
+ * @return
+ * @throws SQLException
+ */
 public static boolean UserDateSelectUserName(int n) throws SQLException{//²éÑ¯ÕËºÅ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="select* from User1";
@@ -248,6 +303,12 @@ public static boolean UserDateSelectUserName(int n) throws SQLException{//²éÑ¯ÕË
 	conn.close();
 	return false;
 }
+/**
+ * ²éÑ¯ÃÜÂëÊÇ·ñ´æÔÚ
+ * @param n
+ * @return
+ * @throws SQLException
+ */
 public static boolean UserDateSelectPassword(int n) throws SQLException{//²éÑ¯ÃÜÂë
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà
 	String sql="select* from User1";
@@ -265,6 +326,11 @@ public static boolean UserDateSelectPassword(int n) throws SQLException{//²éÑ¯ÃÜ
 	conn.close();
 	return false;
 }
+/**
+ * ·µ»ØÖ¸¶¨Êı¾İ¿âÈ«²¿Êı¾İ
+ * @param sql
+ * @return
+ */
 public static Vector<Vector> getSelectAll(String sql){
 	Vector<Vector> rows=new Vector<Vector>();//¶¨ÒåÒª·µ»ØµÄËùÓĞ¼ÇÂ¼¼¯ºÏ
 	DatabaseConnectionSql dbcs=new DatabaseConnectionSql();//Ê¹ÓÃ1ÖĞ¶¨ÒåµÄÁ¬½ÓÊı¾İ¿âµÄÀà

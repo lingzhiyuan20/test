@@ -25,7 +25,8 @@ public class Zhuce extends JFrame {
 	private JLabel lblNewLabel_2;
 
 	/**
-	 * Launch the application.
+	 * Launch the application.注册账号导入数据库
+	 * @param
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

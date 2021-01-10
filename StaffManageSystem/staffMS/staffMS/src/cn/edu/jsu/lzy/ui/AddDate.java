@@ -27,7 +27,9 @@ public class AddDate extends JFrame {
 	private JLabel lblNewLabel_6;
 
 	/**
-	 * Launch the application.
+	 * 
+	 * Launch the application.增加数据到数据库
+	 *  @param
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -44,7 +46,8 @@ public class AddDate extends JFrame {
 	}
 
 	/** 
-	 * Create the frame.
+	 * Create the frame.判断是否增加成功
+	 * @param
 	 */
 	public boolean addDate() {
 		DateOperate3.DateAdd(textField.getText(),textField_1.getText(),textField_2.getText(),textField_3.getText(),textField_4.getText(),textField_5.getText());

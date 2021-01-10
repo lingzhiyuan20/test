@@ -29,7 +29,8 @@ public class UpadateDate extends JFrame {
 	private JTextField textField_5;
 
 	/**
-	 * Launch the application.
+	 * Launch the application.修改数据库内容界面
+	 *  @param
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -46,7 +47,8 @@ public class UpadateDate extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame.修改并确认是否成功
+	 * 
 	 * @return 
 	 */
 	public boolean update() {//修改并确认是否成功
